@@ -4,11 +4,10 @@
 #include "stringtype.h"
 
 int main(){
-    String str;
-    createString(&str,"Hello");
-    append(&str,"World");
+    String* str = createString(&str,"Hello");
+    append(str,"World");
     //I added a print function
     println(str);
-    deleteString(&str);
+    deleteString(str);
     return 0;
 }
