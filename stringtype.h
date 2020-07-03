@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-//Adding bool
+//Adding bool 
 typedef enum {
     false = 0,
     true
