@@ -2,11 +2,10 @@
 #include "stringtype.h"
 
 //create the String
-void createString(String* initString,const char* source){
-    initString->length = strlen(source);
-    int size = initString->length;
-    initString->charArray = (char*)malloc((size+1)*sizeof(char));
-    memcpy(initString->charArray,source,size+1);
+String* createString(){
+    String* initString = (String*)malloc(sizeof(String));
+    initString->length = 0;
+    return initString;
 }
 
 //void setString
@@ -28,6 +27,8 @@ void deleteString(String* source){
     source->length = 0;
     free(source->charArray);
     source->charArray = NULL;
+    free(source);
+    source = NULL;
 }
 
 //print the string
@@ -118,4 +119,3 @@ void swapString(String* stringOne, String* stringTwo){
     stringOne->length = stringTwo->length;
     stringTwo->length = temp;
 }
-
