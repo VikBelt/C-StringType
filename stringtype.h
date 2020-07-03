@@ -16,7 +16,7 @@ typedef struct {
 } String;
 
 //string methods
-void createString(String*, const char*);
+String* createString();
 void setString(String*, const char*);
 void append(String*, const char*);
 void deleteString(String*);
